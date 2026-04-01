@@ -30,10 +30,19 @@ public class Main {
         }
         System.out.println();
 
-        // 2. SORT
+        // 2.1. SORT
         students.sort((s1,s2) -> s1.getName().compareTo(s2.getName()));
 
-        System.out.println("=== After sorting by name: ===");
+        System.out.println("=== After sorting by name (A-Z): ===");
+        for (Student s : students) {
+            System.out.println(s);
+        }
+        System.out.println();
+
+        // 2.2. REVERSED SORT
+        students.sort((s1,s2) -> s2.getName().compareTo(s1.getName()));
+
+        System.out.println("=== After sorting by name (Z-A): ===");
         for (Student s : students) {
             System.out.println(s);
         }
